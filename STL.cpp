@@ -50,13 +50,13 @@ int main()
     cout << endl;
 
     vector<int>::iterator val1 = v3.begin(); // begin() will point at the starting-address of the vector i.e. at the the first element of the vector.
-    cout << *(val1) << endl;
+    cout << "v3[0] = " << *(val1) << endl;
     val1++;
-    cout << *(val1) << endl;
+    cout << "v3[1] = " << *(val1) << endl;
     val1 = val1 + 3;
-    cout << *(val1) << endl;
+    cout << "v3[4] = " << *(val1) << endl;
     val1++;
-    cout << *(val1) << endl;
+    cout << "v3[5] = " << *(val1) << endl;
 
     vector<int> v6(5, 66);
     vector<int> v7(5, 77);
