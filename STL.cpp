@@ -10,6 +10,7 @@ int main()
     pair<pair<int, int>, int> p2 = {p1, 3}; // nested pair.
     cout << "p2 = " << p2.first.first << "   " << p2.first.second << "   " << p2.second << endl;
 
+
     //                VECTORS
     vector<int> v1;      // creates a empty container {}
     v1.push_back(11);    // pushes 1 into the vector 'v1'.
@@ -62,7 +63,7 @@ int main()
     vector<int> v7(5, 77);
 
     vector<int>::iterator val2 = v4.end(); // end() will point right AFTER the end-address of the vector.
-    vector<int>::reverse_iterator val2 = v4.rend();
+    vector<int>::reverse_iterator val2 = v4.rend();     // reverse iteration
     vector<int>::reverse_iterator val2 = v4.rbegin();
 
     return 0;
