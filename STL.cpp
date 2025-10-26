@@ -62,8 +62,8 @@ int main()
     vector<int> v7(5, 77);
 
     vector<int>::iterator val2 = v4.end(); // end() will point right AFTER the end-address of the vector.
-    // vector <int> :: iterator val3 = v6.rend();
-    // vector <int> :: iterator val4 = v7.rbegin();
+    vector<int>::reverse_iterator val2 = v4.rend();
+    vector<int>::reverse_iterator val2 = v4.rbegin();
 
     return 0;
 }
