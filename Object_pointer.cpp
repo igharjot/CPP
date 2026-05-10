@@ -7,7 +7,6 @@ public:
     int runs;
 
     Batsmen(){ }
-
     Batsmen(string name , int runs)
     {
         this->name = name;     
@@ -26,8 +25,6 @@ void change(Batsmen* b)
 
 int main()
 {   
-    //Understanding Pointers
-    
     int x = 7;
     cout << &x << endl;
     int* p = &x;
@@ -54,4 +51,5 @@ int main()
 
     cout << endl;
     return 0;
+
 }

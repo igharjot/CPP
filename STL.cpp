@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     //                PAIRS
@@ -36,8 +35,7 @@ int main()
     v3.push_back(11);
     v4.push_back(11);
     cout << "v3 = ";
-    for (auto i : v3)
-        cout << i << " ";
+    for (auto i : v3) cout << i << " ";
     cout << endl;
     cout << "v4 = ";
     for (auto i : v4)
@@ -68,3 +66,4 @@ int main()
 
     return 0;
 }
+
