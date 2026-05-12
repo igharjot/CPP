@@ -21,18 +21,42 @@ int main()
 
 
     // Fibonacci Series
-    int n, nxt, prev, i, x = 0, y = 1;
+    int n, next, prev, i, x = 0, y = 1;
     cout << "enter the number of digits to print fibonacci series : ";
     cin >> n;
 
     cout << x << "  " << y << "  ";
-    nxt = x + y;
+    next = x + y;
     for (i = 0; i < (n - 2); i++){
-        cout << nxt << "  ";
-        prev = nxt;
-        nxt = nxt + y;
+        cout << next << "  ";
+        prev = next;
+        next += y;
         y = prev;
     }
+    cout << endl << endl;
+
+    // Prime Number Operations
+    int num;
+    cout << "Enter a number to check if it is prime or not : ";
+    cin >> num;
+    bool isPrime = 1;
+    for(int i = 2 ; i <= num/2 ; i++){
+        if (num % i == 0){
+            //cout << num << " is not Prime Number." << endl;
+            isPrime = 0;
+            break;
+        }
+        else{
+            continue;
+        }
+    }
+    if(isPrime == 0){
+        cout << num << " is not Prime Number.";
+    }
+    else{
+        cout << num << " is a Prime Number.";
+    }
     cout << endl;
+
     return 0;
 }
