@@ -12,8 +12,8 @@ int main()
 
     //                VECTORS
     vector<int> v1;      // creates a empty container {}
-    v1.push_back(11);    // pushes 1 into the vector 'v1'.
-    v1.emplace_back(22); // pushes 2 into the vector 'v1'.
+    v1.push_back(11);    // pushes 11 into the vector 'v1'.
+    v1.emplace_back(22); // pushes 22 into the vector 'v1'.
     // emplace_back is faster than push_back.
 
     // Printing Vectors
