@@ -2,6 +2,8 @@
 using namespace std;
 
 int  main(){
+
+    // Integer -> Binary
     int bit = 0, n;
     cout << "Enter a number : ";
     cin >> n;
