@@ -2,11 +2,17 @@
 using namespace std;
 
 int  main(){
-    int n=10;
+    int bit = 0, n;
+    cout << "Enter a number : ";
+    cin >> n;
+    int i = 0;
     while(n!=0){
-        int bit = n&1;
+        int digit = n & 1;
+        bit = (digit * pow(10,i) + bit);
         n = n>>1;
+        i++;
     }
+    cout << "Answer is : " << bit;
 
     return 0;
 }
