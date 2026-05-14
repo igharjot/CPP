@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int num = 2;
+    int num = 3;
     cout << endl;
     switch (num)
     {
@@ -15,9 +15,10 @@ int main(){
         break;    
 
     default:
-        cout << "It is defalut case." << endl;
+        cout << "Defalut case." << endl;
         break;
     }
 
+    cout << endl;
     return 0;
 }
