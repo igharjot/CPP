@@ -3,11 +3,9 @@ using namespace std;
 
 int power(int x, int y){
     int ans = 1;
-
     for(int i=1 ; i<=y ; i++){
         ans = ans*x;
     }
-    
     return ans;
 }
 
@@ -30,31 +28,27 @@ int nCr(int n,  int r){
     int num = factorial(n);
     int denom = factorial(r) * factorial(n-r);
     int answer = num/denom;
-
     return answer;
 }
 
 int main(){
+    cout << "======= Calculating b raised to the power a =======" << endl << endl;
     int a,b;
     cout << "Enter the values of a and b respectively :" <<endl;
     cin >> a >> b;
-
     cout << "b raised to the power a = " << power(a,b) << endl;
 
     cout << endl << "======= Cheking ODD or EVEN =======" << endl << endl;
     int num;
     cout << "Enter a number to  check if tis even or odd : ";
     cin >> num; 
-
     bool result = isEven(num);
-
     if(result){
         cout << "The entered number if even." << endl ; 
     }
     else{
         cout << "The entered number if odd." << endl;
     }
-
     cout << endl << "======= Calculating nCr =======" << endl;
     cout << "Formula : nCr = n! / r! * (n-r)!" << endl << endl;
 
