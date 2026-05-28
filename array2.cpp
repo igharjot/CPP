@@ -13,6 +13,8 @@ int getMax(int arr[], int n){
     for (int i = 0 ; i<n ; i++){
         if(arr[i] > max){
             max = arr[i];
+        } else{
+            continue;
         }
     }
     return max;
@@ -21,11 +23,11 @@ int getMax(int arr[], int n){
 int getMin(int arr[], int n)
 {
     int min = INT_MAX;
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] < min)
-        {
+    for (int i = 0; i < n; i++){
+        if (arr[i] < min){
             min = arr[i];
+        } else{
+            continue;
         }
     }
     return min;
