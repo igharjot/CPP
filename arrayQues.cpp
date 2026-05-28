@@ -2,7 +2,6 @@
 using namespace std;
 
 void printArr(int arr[], int size){
-    cout << "Printing the array : ";
     for (int i = 0; i < size; i++){
         cout << arr[i] << " ";
     }
@@ -40,6 +39,19 @@ void linearSearch(int arr[], int size){
     }
 }
 
+void reverseArray(int arr[], int size){
+    cout << "\n=========== Reversing Array ==========\n" << endl;
+    int n = size;
+    int temp;
+    for (int i = 0, j = size-1; i < size / 2, j >= size / 2; i++, j--){
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    cout << "Printing the Reversed Array : ";
+    printArr(arr, n);
+}
+
 int main(){
     int arr[10];
     int size;
@@ -49,10 +61,12 @@ int main(){
     for(int i=0; i<size; i++){
         cin >> arr[i];
     }
+    cout << "Printing the Array : ";
     printArr(arr, size);
     arraySum(arr, size);
-    linearSearch(arr, size);
-    
+    // linearSearch(arr, size);
+    reverseArray(arr, size);
+
     cout << endl;
     return 0;
 }
