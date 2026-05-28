@@ -41,15 +41,15 @@ void linearSearch(int arr[], int size){
 
 void reverseArray(int arr[], int size){
     cout << "\n=========== Reversing Array ==========\n" << endl;
-    int n = size;
-    int temp;
-    for (int i = 0, j = size-1; i < size / 2, j >= size / 2; i++, j--){
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    int start = 0;
+    int end = size-1;
+    while(start<=end){
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
     }
     cout << "Printing the Reversed Array : ";
-    printArr(arr, n);
+    printArr(arr, size);
 }
 
 int main(){
