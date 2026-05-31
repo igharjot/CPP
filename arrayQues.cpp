@@ -63,8 +63,9 @@ int main(){
     }
     cout << "Printing the Array : ";
     printArr(arr, size);
+
     arraySum(arr, size);
-    // linearSearch(arr, size);
+    linearSearch(arr, size);
     reverseArray(arr, size);
 
     cout << endl;

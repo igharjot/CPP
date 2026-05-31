@@ -30,6 +30,7 @@ int main() {
     cout << "Printing the Array : ";
     printArr(arr, size);
     swapAdjacent(arr, size);
+    
     cout << endl;
     return 0;
 }
