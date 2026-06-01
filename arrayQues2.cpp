@@ -18,7 +18,14 @@ void swapAdjacent(int arr[], int size){
     printArr(arr, size);
 }
 
-int main() {
+void interSecArr(int arr[], int size){
+    for(int i=0; i<size; i++){
+        
+    }
+}
+
+int
+main(){
     int arr[50];
     int size;
     cout << "\nEnter the size of the array : ";
@@ -30,7 +37,9 @@ int main() {
     cout << "Printing the Array : ";
     printArr(arr, size);
     swapAdjacent(arr, size);
-    
+
+    interSecArr(arr, size);
+
     cout << endl;
     return 0;
 }
