@@ -18,19 +18,37 @@ void swapAdjacent(int arr[], int size){
     printArr(arr, size);
 }
 
-vector<int> interSecArr(int arr1[], int arr2[], int size){
+vector<int> interSecArr(int arr1[], int arr2[], int n, int m){
     vector<int> ans;
-    for(int i=0; i<size; i++){
-        int element = arr1[i];
-        for(int j=0; j<size; j++){
-            if(element == arr2[j]){
-                ans.push_back(element);
-                arr2[j] = INT_MIN;
-                break;
-            }
+    int i=0, j=0;
+    while(i<n && j<m){
+        if(arr1[i]<arr2[j]){
+            i++;
+        } 
+        else if(arr1[i] == arr2[j]){
+            ans.push_back(arr1[i]);
+            i++;
+            j++;
+        }
+        else if (arr1[i] > arr2[j]){
+            j++;
         }
     }
     return ans;
+
+    // SOLUTION - 2 (High Complexity)
+
+    // for(int i=0; i<n; i++){
+    //     int element = arr1[i];
+    //     for(int j=0; j<m; j++){
+    //         if(element == arr2[j]){
+    //             ans.push_back(element);
+    //             arr2[j] = INT_MIN;
+    //             break;
+    //         }
+    //     }
+    // }
+    // return ans;
 }
 
 int
@@ -71,7 +89,7 @@ main(){
     cout << "Array - 2 : ";
     printArr(arr2, m);
 
-    vector<int> ans = interSecArr(arr1, arr2, size);
+    vector<int> ans = interSecArr(arr1, arr2, n, m);
     cout << "\nIntersection of Array-1 and Array-2 : ";
     for(auto& num : ans){
         cout << num << " ";
