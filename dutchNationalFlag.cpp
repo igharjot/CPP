@@ -19,7 +19,27 @@ int main() {
     for (int i = 0; i < n; i++){
         cin >> arr[i];
     }
-    int low = 0, mid, high = n;
+    cout << "Printing the Array: ";
+    printArr(arr, n);
+    int low = 0, mid = 0, high = n-1;
+    
+    while (high >= mid){
+        if (arr[mid] == 0){
+            swap(arr[low], arr[mid]);
+            low++;
+            mid++;
+        }
+        else if(arr[mid] == 1){
+            mid++;
+        }
+        else{
+            swap(arr[mid], arr[high]);
+            high--;
+        }
+    }
+
+    cout << "Printing the Sorted 0-1-2 Array: ";
+    printArr(arr, n);
 
     cout << endl;
     return 0;
