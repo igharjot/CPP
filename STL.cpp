@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
     //                PAIRS
@@ -9,6 +10,12 @@ int main()
     pair<pair<int, int>, int> p2 = {p1, 3}; // nested pair.
     cout << "p2 = " << p2.first.first << "   " << p2.first.second << "   " << p2.second << endl;
 
+    pair<int , int> pairArr[] = { {2,5}, {7,5}, {12,5} };
+    int size = 0;
+    size = sizeof(pairArr)/sizeof(pairArr[0]);
+    for(int i=0; i < size; i++){
+        cout << "Pair Array : " << pairArr[i].first << "   " << pairArr[i].second << endl;
+    }
 
     //                VECTORS
     vector<int> v1;      // creates a empty container {}
