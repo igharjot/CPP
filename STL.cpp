@@ -68,8 +68,22 @@ int main()
     vector<int> v7(5, 77);
 
     vector<int>::iterator val2 = v4.end(); // end() will point right AFTER the end-address of the vector.
-    vector<int>::reverse_iterator val2 = v4.rend();     // reverse iteration
-    vector<int>::reverse_iterator val2 = v4.rbegin();
+    vector<int>::reverse_iterator val3 = v3.rend();         // reverse iteration
+    vector<int>::reverse_iterator val4 = v4.rbegin();
+
+
+    // Printing a Vector
+    cout << "Printing Vector v3:" << endl;
+    for(auto it = v3.begin(); it!=v3.end(); ++it){
+        cout << *(it) << " ";
+    }
+
+    cout << "" << endl;
+
+    // Size of the vector
+    int len = v3.size();
+    cout << "Size (number of elements) of vector v3 is : " << size << endl;
+
 
     return 0;
 }
