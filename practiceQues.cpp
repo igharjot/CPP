@@ -15,6 +15,7 @@ int main() {
     string word = "";
 
     for(char ch : line){
+        tolower(ch);
         cout << ch << ", ";
         if(ch == ' '){
             cout << "The word is : " << word << endl;
@@ -28,7 +29,7 @@ int main() {
         cout << word << endl;
     }
 
-    // countWords(words);
+    // countWords(words); 
 
     cout << endl;
     return 0;

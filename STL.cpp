@@ -84,6 +84,13 @@ int main()
     int len = v3.size();
     cout << "Size (number of elements) of vector v3 is : " << size << endl;
 
+    v3.pop_back();
+
+    v6.swap(v7); // swaps the two vectors
+
+    v4.clear();  // males the vector empty.
+
+    cout << "Is the vector v7 empty? : " << v7.empty() << endl;
 
     return 0;
 }
