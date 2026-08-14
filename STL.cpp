@@ -1,9 +1,162 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void explainList(){
+
+    list<int> ls;        // Declaration
+
+    ls.push_back(2);     // {2}
+    ls.emplace_back(4);  // {2,4}
+
+    ls.push_front(5);    // {5,2,4}
+    ls.emplace_front();  // {2,4}
+
+    // Rest functions same as vector - begin, end, rbegin, rend, clear, insert, size, swap
+}
+
+void explainDeque(){
+    deque<int> dq;
+    // exactly similar to list and vector.
+}
+
+void explainStack(){
+
+    //         STACK (LIFO)
+    // Stack mainly deals with 3 functions - push(), pop() and top()
+
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.push(4);
+    st.emplace(5);
+
+    cout << st.top(); // 5
+
+    st.pop();
+
+    cout << st.top();   // 4
+    cout << st.size();  // 4
+    cout << st.empty(); // clears the stack
+
+    stack<int> st1, st2;
+    st1.swap(st2);   // swapping two stacks
+}
+
+void explainQueue(){
+    //         QUEUE (FIFO)
+    queue<int> q;
+    q.push(1);     // {1}
+    q.push(2);     // {1,2}
+    q.emplace(3);  // {1,2,3}
+    q.emplace(4);  // {1,2,3,4}
+
+    cout << q.back();  // 4
+    q.back() += 5;     // 4 + 5
+    cout << q.back();  // 9
+
+    q.pop();   // {2,3,9} deletes front element as FIFO
+
+    cout << q.front(); // 2
+}
+
+void explainPriorityQue(){
+    // PRIORITY QUEUE - It sinnot a linear DS, it as maintained as tree DS.
+
+    priority_queue<int> pq;  // MAX HEAP
+    // Inserts elements in descending order automatically
+
+    pq.push(10);    // {10}
+    pq.push(20);    // {20,10}
+    pq.push(30);    // {30,20,10}
+    pq.emplace(40); // {40,30,20,10}
+    pq.emplace(50); // {50,40,30,20,10}
+    pq.push(25);    // {50,40,30,25,20,10}
+    pq.push(15);    // {50,40,30,25,20,15,10}
+    pq.emplace(45); // {50,45,40,30,25,20,15,10}
+    pq.emplace(35); // {50,45,40,35,30,25,20,15,10}
+
+    cout << pq.top(); // 50
+    pq.pop();         // {45,40,35,30,25,20,15,10}
+    pq.pop();         // {40,35,30,25,20,15,10}
+    cout << pq.top(); // 40
+
+
+    priority_queue<int, vector<int>, greater<int>> pq1;   // MIN HEAP
+    // Inserts elements in ascending order automatically
+    
+    pq.push(10);    // {10}
+    pq.push(20);    // {10,20}
+    pq.push(30);    // {10,20,30}
+    pq.emplace(40); // {10,20,30,40}
+    pq.emplace(50); // {10,20,30,40,50}
+
+    pq.push(25);    // {10,20,25,30,40,50}
+    pq.push(15);    // {10,15,20,25,30,40,50}
+    pq.emplace(45); // {10,15,20,25,30,40,45,50}
+    pq.emplace(35); // {10,15,20,25,30,35,40,45,50}
+
+    cout << pq.top(); // 10
+    pq.pop();         // {15,20,25,30,35,40,45,50}
+    pq.pop();         // {20,25,30,35,40,45,50}
+    cout << pq.top(); // 20
+}
+
+void explainSet(){
+    set<int> s;
+    // Inserts unique occurrences of the elements in sorted order automatically.
+    // No element is repeated more than once.
+
+    s.insert(3);  // {3}
+    s.emplace(2); // {2,3}
+    s.insert(2);  // {2,3}
+    s.insert(1);  // {1,2,3}
+    s.emplace(3); // {1,2,3}
+    
+    auto it = s.find(3);  // If the element is present in the set, it will point to that element (3)
+    auto it = s.find(5);  // If the element is not present in the set, it will point to s.end()
+
+    s.erase(2);  // {1,3}
+}
+
+void explainMultiSet(){
+    multiset<int> ms;
+    // Multiset can store multiple occurrences of the same element
+
+    ms.insert(10);  // {10}
+    ms.insert(11);  // {10,11}
+    ms.insert(10);  // {10,10,11}
+    ms.insert(10);  // {10,10,10,11}
+
+    ms.erase(10);  // erases all the occurrences of 10.
+
+    int cnt = ms.count(11);  // counts number of occurrences of 11 in ms ie 1
+}
+
+void explainUnorderedSet(){
+    unordered_set<int> us;
+    // Inserts elements in unsorted manner.
+    // Elements are inserted uniquely(only once).
+}
+
+void explainMap(){
+    // MAPS
+    // Stores data in {Key,Value} format, where Key and Value can be of any datatype independently
+    // Stores Unique Keys in sorted order.
+    map<int,int> m1;
+    map<int, pair<int,int>> m2;
+    map<pair<int,int>, int> m3;
+
+    m1[1] = 2;         // { {1,2} }
+    m1.insert({3,1});  // { {1,2}, {3,1} }
+    m1.emplace(2,5); // { {1,2}, {2,5}, {3,1} }
+
+}
+
 int main()
 {
     //                PAIRS
+
     pair<int, int> p1 = {1, 2};
     cout << "p1 = " << p1.first << "   " << p1.second << endl;
 
@@ -17,7 +170,11 @@ int main()
         cout << "Pair Array : " << pairArr[i].first << "   " << pairArr[i].second << endl;
     }
 
-    //                VECTORS
+
+
+
+    //                VECTORS (Singly Linked List)
+
     vector<int> v1;      // creates a empty container {}
     v1.push_back(11);    // pushes 11 into the vector 'v1'.
     v1.emplace_back(22); // pushes 22 into the vector 'v1'.
