@@ -171,26 +171,33 @@ void explainMap()
         cout << it.first << " - " << it.second << endl;
     }
 
-    cout << "m2 : ";
+    cout << "\nm2 : ";
     for (auto it : m2) { // it stores each {key,value} as a 'Pair'
         cout << it.first << " - {" << it.second.first << "," << it.second.first << "}" << endl;
     }
 
-    cout << "m3 : ";
+    cout << "\nm3 : ";
     for (auto it : m3) { // it stores each {key,value} as a 'Pair'
         cout << "{" << it.first.first << "," << it.first.second << "} - " << it.second << endl;
     }
 
-    cout << m1[1] << endl;
-    cout << m1[5] << endl;
+    cout << "m1[1] = " << m1[1] << endl;
+    cout << "m1[2] = " << m1[2] << endl;
 
     cout << "Using m1.find(3) : ";
     auto it2 = m1.find(3);
-    cout << (*it2).first << "  " << it2->second;
+    cout << (*it2).first << " - " << it2->second << endl;
 
     cout << "Using m1.find(5) : ";
     auto it1 = m1.find(5);
-    cout << (*it1).first << "  " << it1->second;
+    cout << (*it1).first << " - " << it1->second << endl;
+}
+
+void explainMultiMap(){
+    // m[key] cannot be used here in multimaps
+    // duplicate keys can be stored with different values
+    // store duplicate keys in sorted order
+    // everything else is same as the maps
 }
 
 int main()
