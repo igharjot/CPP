@@ -7,6 +7,10 @@ using namespace std;
 //     }
 // }
 
+void findGCD(int x, int y){
+    cout << x << " , " << y << endl;
+}
+
 int main() {
     string line;
     cout << "Enter a string : ";
@@ -30,6 +34,8 @@ int main() {
     }
 
     // countWords(words); 
+
+    findGCD(num1, num2);
 
     cout << endl;
     return 0;

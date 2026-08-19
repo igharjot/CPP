@@ -276,8 +276,7 @@ int main()
 
     // Printing a Vector
     cout << "Printing Vector v3:" << endl;
-    for (auto it = v3.begin(); it != v3.end(); ++it)
-    {
+    for (auto it = v3.begin(); it != v3.end(); ++it) {
         cout << *(it) << " ";
     }
 
