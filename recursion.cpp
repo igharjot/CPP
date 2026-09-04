@@ -15,16 +15,15 @@ void NToOne(int n, int i){
 
 void printArray(int arr[], int n){
     for(int i=0; i<n; i++){
-        cout << arr[i] << " , ";
+        cout << arr[i] << "  ";
     }
     cout << endl;
 }
 
-void reverseArray(int arr[], int n){
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";
-    }
-
+void reverseArray(int a[], int l, int r){
+    if(l>=r) return;
+    swap(a[l], a[r]);
+    reverseArray(a, l+1, r-1);
 }
 
 int main() {
@@ -49,8 +48,10 @@ int main() {
     cout << "Your array is : ";
     printArray(arr, size);
     
-    reverseArray(arr, size);
-    
-    
+    reverseArray(arr, 0, size-1);
+
+    cout << "Reversed Array :";
+    printArray(arr, size);
+
     return 0;
 }
