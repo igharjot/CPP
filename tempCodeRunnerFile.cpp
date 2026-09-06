@@ -1,10 +1,5 @@
 
-            }
-        }
-    }
-    cout << "Printing Sorted 0,1 array : ";
-    printArray(arr, val);
-
+    cout << "f(" << n << ") = " << fibonacci(n) << endl;
     cout << endl;
     return 0;
 }
